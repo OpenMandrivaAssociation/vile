@@ -8,7 +8,7 @@ Version: %{version}
 Release: %{release}
 License: GPL
 Group: Editors
-Source: %{name}-9.5.tar.bz2
+Source: ftp://invisible-island.net/vile/%{name}-9.5.tar.bz2
 Patch0: vile-9.5a.patch
 Patch1: vile-9.5b.patch
 Patch2: vile-9.5c.patch
@@ -30,7 +30,7 @@ Patch17: vile-9.5-varargs.patch
 Patch18: vile-9.5-64bit-fixes.patch
 BuildRequires:	flex ncurses-devel
 BuildRoot:%{_tmppath}/%{name}-build-%{version}
-URL: http://www.vile.cx/
+URL: http://invisible-island.net/vile/
 
 %description
 vile is a text editor which is extremely compatible with vi in terms
