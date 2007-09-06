@@ -1,12 +1,12 @@
 %define name vile 
-%define version 9.5q
+%define version 9.5r
 %define release %mkrel 1
 
 Summary: Vi compatible text editor 
 Name: %{name}
 Version: %{version}
 Release: %{release}
-License: GPL
+License: GPL+
 Group: Editors
 Source: ftp://invisible-island.net/vile/%{name}-9.5.tar.bz2
 Patch0: vile-9.5a.patch
@@ -26,8 +26,9 @@ Patch13: vile-9.5n.patch
 Patch14: vile-9.5o.patch
 Patch15: vile-9.5p.patch
 Patch16: vile-9.5q.patch
-Patch17: vile-9.5-varargs.patch
-Patch18: vile-9.5-64bit-fixes.patch
+Patch17: vile-9.5r.patch
+Patch100: vile-9.5-varargs.patch
+Patch101: vile-9.5-64bit-fixes.patch
 BuildRequires:	flex ncurses-devel
 BuildRoot:%{_tmppath}/%{name}-build-%{version}
 URL: http://invisible-island.net/vile/
@@ -58,8 +59,9 @@ support for non-Unix hosts.
 %patch14 -p1
 %patch15 -p1
 %patch16 -p1
-%patch17 -p1 -b .varargs
-%patch18 -p1 -b .64bit-fixes
+%patch17 -p1
+%patch100 -p1 -b .varargs
+%patch101 -p1 -b .64bit-fixes
 
 %build
 %configure
