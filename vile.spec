@@ -30,6 +30,7 @@ Patch17: vile-9.5r.patch
 Patch100: vile-9.5-varargs.patch
 Patch101: vile-9.5-64bit-fixes.patch
 BuildRequires:	flex ncurses-devel
+BuildRoot:%{_tmppath}/%{name}-build-%{version}
 URL: http://invisible-island.net/vile/
 
 %description
