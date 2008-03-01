@@ -1,37 +1,23 @@
-%define name vile 
-%define version 9.5r
-%define release %mkrel 1
-
-Summary: Vi compatible text editor 
-Name: %{name}
-Version: %{version}
-Release: %{release}
-License: GPL+
-Group: Editors
-Source: ftp://invisible-island.net/vile/%{name}-9.5.tar.bz2
-Patch0: vile-9.5a.patch
-Patch1: vile-9.5b.patch
-Patch2: vile-9.5c.patch
-Patch3: vile-9.5d.patch
-Patch4: vile-9.5e.patch
-Patch5: vile-9.5f.patch
-Patch6: vile-9.5g.patch
-Patch7: vile-9.5h.patch
-Patch8: vile-9.5i.patch
-Patch9: vile-9.5j.patch
-Patch10: vile-9.5k.patch
-Patch11: vile-9.5l.patch
-Patch12: vile-9.5m.patch
-Patch13: vile-9.5n.patch
-Patch14: vile-9.5o.patch
-Patch15: vile-9.5p.patch
-Patch16: vile-9.5q.patch
-Patch17: vile-9.5r.patch
-Patch100: vile-9.5-varargs.patch
-Patch101: vile-9.5-64bit-fixes.patch
-BuildRequires:	flex ncurses-devel
-BuildRoot:%{_tmppath}/%{name}-build-%{version}
-URL: http://invisible-island.net/vile/
+Summary:	Mostly vi-compatible text editor, with enhancements
+Name:		vile
+Version:	9.6g
+Release:	%{mkrel 1}
+License:	GPL+
+Group:		Editors
+Source0:	ftp://invisible-island.net/vile/%{name}-9.6.tgz
+Patch0:		ftp://invisible-island.net/vile/patches/vile-9.6a.patch.gz
+Patch1:		ftp://invisible-island.net/vile/patches/vile-9.6b.patch.gz
+Patch2:		ftp://invisible-island.net/vile/patches/vile-9.6c.patch.gz
+Patch3:		ftp://invisible-island.net/vile/patches/vile-9.6d.patch.gz
+Patch4:		ftp://invisible-island.net/vile/patches/vile-9.6e.patch.gz
+Patch5:		ftp://invisible-island.net/vile/patches/vile-9.6f.patch.gz
+Patch6:		ftp://invisible-island.net/vile/patches/vile-9.6g.patch.gz
+Patch100:	vile-9.5-varargs.patch
+Patch101:	vile-9.5-64bit-fixes.patch
+BuildRequires:	flex
+BuildRequires:	ncurses-devel
+BuildRoot:	%{_tmppath}/%{name}-build-%{version}
+URL:		http://invisible-island.net/vile/
 
 %description
 vile is a text editor which is extremely compatible with vi in terms
@@ -41,7 +27,7 @@ system support, an optional embedded perl interpreter, and robust
 support for non-Unix hosts.
 
 %prep
-%setup -q -n %{name}-9.5
+%setup -q -n %{name}-9.6
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -49,34 +35,23 @@ support for non-Unix hosts.
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
-%patch7 -p1
-%patch8 -p1
-%patch9 -p1
-%patch10 -p1
-%patch11 -p1
-%patch12 -p1
-%patch13 -p1
-%patch14 -p1
-%patch15 -p1
-%patch16 -p1
-%patch17 -p1
 %patch100 -p1 -b .varargs
 %patch101 -p1 -b .64bit-fixes
 
 %build
-%configure
+%configure2_5x
 %make prefix=%{_prefix}
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
 
 #(peroyvind) remove unpackaged files
-rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}.hlp
+rm -f %{buildroot}%{_datadir}/%{name}.hlp
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)
