@@ -1,6 +1,6 @@
 Summary:	Mostly vi-compatible text editor, with enhancements
 Name:		vile
-Version:	9.7r
+Version:	9.7s
 Release:	%mkrel 1
 License:	GPL+
 Group:		Editors
