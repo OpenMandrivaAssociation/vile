@@ -1,7 +1,7 @@
 Summary:	Mostly vi-compatible text editor, with enhancements
 Name:		vile
 Version:	9.7z
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL+
 Group:		Editors
 Source0:	ftp://invisible-island.net/vile/current/%{name}-%{version}.tgz
