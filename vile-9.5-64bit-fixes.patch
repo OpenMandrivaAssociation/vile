@@ -1,0 +1,12 @@
+--- vile-9.5/ucrypt.c.64bit-fixes	2001-02-13 20:39:50.000000000 -0500
++++ vile-9.5/ucrypt.c	2005-08-23 11:44:24.000000000 -0400
+@@ -6,6 +6,9 @@
+  *
+  */
+ 
++#define _XOPEN_SOURCE
++#include <unistd.h>
++
+ # include	"estruct.h"
+ # include	"edef.h"
+ 
