@@ -9,7 +9,7 @@ Patch101:	vile-9.5-64bit-fixes.patch
 BuildRequires:	flex
 BuildRequires:	ncurses-devel
 BuildRoot:	%{_tmppath}/%{name}-build-%{version}
-URL:		http://invisible-island.net/vile/
+URL:		https://invisible-island.net/vile/
 
 %description
 vile is a text editor which is extremely compatible with vi in terms
