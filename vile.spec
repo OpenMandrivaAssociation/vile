@@ -6,6 +6,11 @@ License:	GPL+
 Group:		Editors
 Source0:	ftp://invisible-island.net/vile/current/%{name}-%{version}.tgz
 Patch101:	vile-9.5-64bit-fixes.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	flex
 BuildRequires:	ncurses-devel
 BuildRoot:	%{_tmppath}/%{name}-build-%{version}
