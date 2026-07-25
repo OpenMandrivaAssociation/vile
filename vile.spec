@@ -1,7 +1,7 @@
 Summary:	Mostly vi-compatible text editor, with enhancements
 Name:		vile
 Version:	9.8
-Release:	%mkrel 1
+Release:	2
 License:	GPL+
 Group:		Editors
 Source0:	ftp://invisible-island.net/vile/current/%{name}-%{version}.tgz
@@ -131,7 +131,7 @@ rm -rf %{buildroot}
 * Wed Dec 17 2003 Daouda LO <daouda@mandrakesoft.com> 9.4-1mdk
 - 9.4 
 
-* Thu Jun 05 2003 Per Øyvind Karlsen <peroyvind@sintrax.net> 9.3-2mdk
+* Thu Jun 05 2003 Per ï¿½yvind Karlsen <peroyvind@sintrax.net> 9.3-2mdk
 - fix unpackaged files
 - macroize
 
